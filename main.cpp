@@ -189,5 +189,5 @@ try
 catch( const std::exception& e)
 {
     std::cerr << "EXCEPTION IN MAIN: " << e.what( ) << std::endl;
-    return 1;
+    return 1
 }
