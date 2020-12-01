@@ -131,6 +131,8 @@ draw_ellipse( const sdl::Renderer& renderer, int x1, int y1, int x2, int y2 )
 int main( int, char** )
 try
 {
+    std::unique_ptr< graphical::Element > graphical_element(
+                std::make_unique< graphical::Line >( 10, 70, 100, 75 ) );
     sdl::Library library( SDL_INIT_VIDEO );
     sdl::Window window( "sdl-test2", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
                         800, 600, 0 );
@@ -176,6 +178,7 @@ try
             {
                 draw_ellipse( renderer, 0, 0, x, y );
             }
+            graphical_element->draw( renderer );
             renderer.present( );
         }
         else

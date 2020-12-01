@@ -18,5 +18,6 @@ else( )
 	include_directories( ${SDL2_INCLUDE_DIRECTORIES} )
 endif( )
 
-add_executable( ${PROJECT_NAME} main.cpp SDLLibrary.h SDLLibrary.cpp GraphicalElement.h )
+add_executable( ${PROJECT_NAME} main.cpp SDLLibrary.h SDLLibrary.cpp GraphicalElement.h
+    GraphicalElement.cpp )
 target_link_libraries( ${PROJECT_NAME} ${SDL2_LIBRARIES} )
